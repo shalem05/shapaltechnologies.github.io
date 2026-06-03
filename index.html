@@ -3,212 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shapal Technologies | IT & Computer Services Pune</title>
+    <title>Shapal Technologies | Shalem Chinta</title>
     <meta name="google-site-verification" content="SdKANQG-HVkA1br16BIVv6ZcKBS1nzIZmd2F3zEuH-Y" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg: #f8fafc;
-            --surface: #ffffff;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --brand: #2563eb;
-            --brand-light: #eff6ff;
-            --border: #e2e8f0;
-            --shadow: rgba(148, 163, 184, 0.12);
-        }
-        
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: var(--bg); 
-            color: var(--text-primary); 
-            line-height: 1.6; 
-            padding-bottom: 80px;
+            background-color: #ffffff; 
+            color: #111111; 
+            line-height: 1.5; 
+            padding: 0;
         }
-        
-        header { 
-            background: var(--surface);
-            padding: 100px 20px 60px 20px; 
-            text-align: center; 
-            border-bottom: 1px solid var(--border);
+
+        .hero-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 24px 80px 24px;
         }
-        
-        header h1 { 
-            font-size: 3.2em; 
+
+        .name-badge {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+
+        h1 {
+            font-size: 4.5em;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            max-width: 900px;
+        }
+
+        .lead-text {
+            font-size: 1.5em;
+            color: #4b5563;
+            font-weight: 400;
+            max-width: 700px;
+            margin-bottom: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #111827;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1em;
+            transition: background 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: #2563eb;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 100px 24px;
+        }
+
+        .section-header {
+            font-size: 2em;
             font-weight: 700;
             letter-spacing: -0.03em;
-            color: var(--text-primary);
-            margin-bottom: 12px;
-        }
-        
-        header p {
-            color: var(--text-secondary);
-            font-size: 1.25em;
-            font-weight: 400;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-
-        .section-title {
-            font-size: 1.75em;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin: 60px 0 24px 0;
-            color: var(--text-primary);
+            margin-bottom: 40px;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 40px;
         }
 
-        /* Executive Profile Card Layout */
-        .profile-section {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 40px;
-            margin-top: -40px;
-            box-shadow: 0 10px 30px var(--shadow);
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+        .services-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
         }
 
-        .profile-tag {
-            align-self: flex-start;
-            background: var(--brand-light);
-            color: var(--brand);
-            padding: 6px 14px;
-            border-radius: 30px;
-            font-size: 0.85em;
+        .service-block h3 {
+            font-size: 1.5em;
             font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .service-block p {
+            color: #4b5563;
+            font-size: 1.05em;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-item h4 {
+            font-size: 0.9em;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            color: #9ca3af;
+            margin-bottom: 8px;
         }
 
-        .profile-name {
-            font-size: 2.2em;
-            font-weight: 700;
-            letter-spacing: -0.02em;
+        .contact-item p {
+            font-size: 1.2em;
+            font-weight: 500;
+            color: #111827;
         }
 
-        .profile-role {
-            font-size: 1.1em;
-            color: var(--brand);
-            font-weight: 600;
-            margin-top: -8px;
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            border-top: 1px solid #e5e7eb;
+            color: #9ca3af;
+            font-size: 0.95em;
         }
 
-        .profile-desc {
-            color: var(--text-secondary);
-            font-size: 1.05em;
-            max-width: 850px;
-        }
-        
-        /* Grid Layouts */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; }
-        
-        .card { 
-            background: var(--surface);
-            border: 1px solid var(--border); 
-            padding: 32px; 
-            border-radius: 16px; 
-            box-shadow: 0 4px 12px var(--shadow);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(148, 163, 184, 0.2);
-        }
-        
-        .card h3 { margin-bottom: 12px; font-size: 1.35em; font-weight: 600; }
-        .card p { color: var(--text-secondary); font-size: 1em; }
-        
-        .contact-list li {
-            margin-bottom: 14px;
-            color: var(--text-secondary);
-            font-size: 1em;
-            list-style: none;
-        }
-        
-        .contact-list strong { 
-            color: var(--text-primary); 
-            display: inline-block;
-            width: 100px;
-        }
-        
-        footer { 
-            text-align: center; 
-            padding: 60px 20px 20px 20px; 
-            margin-top: 100px; 
-            border-top: 1px solid var(--border);
-            color: var(--text-secondary);
-            font-size: 0.95em; 
+        @media (max-width: 768px) {
+            h1 { font-size: 3em; }
+            .lead-text { font-size: 1.25em; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Shapal Technologies</h1>
-        <p>Bespoke Engineering & Technology Architecture Consulting</p>
-    </header>
+    <!-- Elite Hero Header -->
+    <div class="hero-section">
+        <div class="name-badge">Shalem Chinta — Shapal Technologies</div>
+        <h1>We design and build high-end software solutions.</h1>
+        <p class="lead-text">Engineering pristine web applications, smart digital infrastructure, and expert technology architecture consulting based out of Pune, India.</p>
+        <a href="mailto:shalemchinta@gmail.com" class="cta-button">Start a Project</a>
+    </div>
 
-    <div class="container">
+    <div class="main-container">
         
-        <!-- Corporate Profile Box -->
-        <div class="profile-section">
-            <div class="profile-tag">Corporate Leadership</div>
-            <h2 class="profile-name">Shalem Chinta</h2>
-            <div class="profile-role">Founder & Managing Director</div>
-            <p class="profile-desc">
-                Directing strategic technical vision and custom software execution frameworks at Shapal Technologies. We engineer robust, enterprise-grade digital tools and high-efficiency application systems built for modern business environments.
-            </p>
-        </div>
-        
-        <h2 class="section-title">Expert Capabilities</h2>
-        <div class="grid-3">
-            <div class="card">
+        <!-- Capabilities -->
+        <h2 class="section-header">Expertise</h2>
+        <div class="services-layout">
+            <div class="service-block">
                 <h3>Computer Programming</h3>
-                <p>Architecting robust applications, stable backend integrations, and custom system developments designed to scale seamlessly.</p>
+                <p>Writing clean, production-ready source code and building stable, custom software applications designed around your exact operational needs.</p>
             </div>
-            <div class="card">
-                <h3>IT Consultancy</h3>
-                <p>Strategic technology blueprints, asset modernizations, resource architecture planning, and tailored risk-reduction structures.</p>
+            <div class="service-block">
+                <h3>Tech Consultancy</h3>
+                <p>Evaluating workflows, modernizing out-of-date assets, and crafting strategic structural roadmaps to scale your technical infrastructure safely.</p>
             </div>
-            <div class="card">
-                <h3>Computer Services</h3>
-                <p>Full-scale operations consulting and custom technical delivery mechanisms engineered to eliminate process inefficiencies.</p>
+            <div class="service-block">
+                <h3>Digital Solutions</h3>
+                <p>Providing high-efficiency operations handling and advanced system management to keep business tools running flawlessly.</p>
             </div>
         </div>
 
-        <h2 class="section-title">Corporate Profile</h2>
-        <div class="grid-2">
-            <div class="card">
-                <h3>Corporate Communications</h3>
-                <p style="margin-bottom: 20px;">For engagement proposals or technical discovery consultation inquiries, reach out directly:</p>
-                <ul class="contact-list">
-                    <li><strong>Direct Email:</strong> shalemchinta@gmail.com</li>
-                    <li><strong>Status:</strong> Active Engagement Pool</li>
-                </ul>
+        <!-- Connect Layout -->
+        <h2 class="section-header">Get In Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h4>Direct Inquiries</h4>
+                <p>shalemchinta@gmail.com</p>
             </div>
-            <div class="card">
-                <h3>Headquarters Location</h3>
-                <p style="margin-bottom: 20px;">Operating and engineering core capabilities from our central headquarters office layout:</p>
-                <ul class="contact-list">
-                    <li><strong>HQ Address:</strong> Sr No 47/1, NP Hills, Heaven Park, Pune, MH, India - 411060</li>
-                </ul>
+            <div class="contact-item">
+                <h4>Headquarters</h4>
+                <p>Heaven Park, Pune, MH, India</p>
             </div>
         </div>
-        
+
     </div>
 
     <footer>
-        <p>&copy; 2026 Shapal Technologies. Administrative Oversight by Shalem Chinta. All Rights Reserved.</p>
+        <p>&copy; 2026 Shapal Technologies. Created by Shalem Chinta. All Rights Reserved.</p>
     </footer>
 
 </body>
