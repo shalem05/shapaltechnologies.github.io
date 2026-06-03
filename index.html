@@ -5,56 +5,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shapal Technologies | IT & Computer Services Pune</title>
     <meta name="google-site-verification" content="SdKANQG-HVkA1br16BIVv6ZcKBS1nzIZmd2F3zEuH-Y" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; }
-        header { background: #1a237e; color: #fff; padding: 40px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5em; }
-        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
-        .card { border: 1px solid #e0e0e0; padding: 20px; border-radius: 5px; background: #fafafa; }
-        .badge { background: #e8f5e9; color: #2e7d32; padding: 5px 10px; border-radius: 4px; display: inline-block; font-size: 0.9em; font-weight: bold; }
-        footer { background: #333; color: #fff; text-align: center; padding: 20px; margin-top: 5px; font-size: 0.9em; }
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #7dd3fc;
+            --border: #334155;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-color); 
+            color: var(--text-main); 
+            line-height: 1.6; 
+            padding-bottom: 60px;
+        }
+        
+        header { 
+            background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+            padding: 80px 20px; 
+            text-align: center; 
+            border-bottom: 1px solid var(--border);
+        }
+        
+        header h1 { 
+            font-size: 3em; 
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        header p {
+            color: var(--text-muted);
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 24px; }
+        
+        .badge { 
+            background: rgba(56, 189, 248, 0.1); 
+            color: var(--accent); 
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 6px 14px; 
+            border-radius: 100px; 
+            display: inline-block; 
+            font-size: 0.85em; 
+            font-weight: 600; 
+            margin-bottom: 20px;
+        }
+
+        .leadership-card {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .leadership-card h3 {
+            color: var(--accent);
+            font-size: 1.4em;
+            margin-bottom: 5px;
+        }
+
+        .leadership-card .title {
+            color: var(--text-muted);
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        h2 { font-size: 1.8em; margin-bottom: 20px; font-weight: 600; position: relative; padding-left: 15px; }
+        h2::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 4px; background: var(--accent); border-radius: 2px; }
+        
+        p.intro { color: var(--text-muted); font-size: 1.1em; margin-bottom: 40px; max-width: 800px; }
+        
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 50px; }
+        
+        .card { 
+            background: var(--card-bg);
+            border: 1px solid var(--border); 
+            padding: 30px; 
+            border-radius: 12px; 
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
+        }
+        
+        .card h3 { margin-bottom: 12px; font-size: 1.3em; color: var(--text-main); }
+        .card p { color: var(--text-muted); font-size: 0.95em; }
+        
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .info-block { background: #111827; border: 1px solid var(--border); padding: 25px; border-radius: 12px; }
+        .info-block h4 { color: var(--accent); margin-bottom: 15px; font-size: 1.1em; }
+        
+        ul { list-style: none; }
+        ul li { margin-bottom: 12px; color: var(--text-muted); font-size: 0.95em; }
+        ul li strong { color: var(--text-main); }
+        
+        footer { 
+            text-align: center; 
+            padding: 40px 20px; 
+            margin-top: 80px; 
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9em; 
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Shapal Technologies</h1>
-        <p>Expert Information Technology & Computer Service Activities</p>
+        <p>Enterprise IT Infrastructure & Digital Engineering Solutions</p>
     </header>
 
     <div class="container">
-        <span class="badge">Registered Govt. of India Micro Enterprise</span>
+        <div class="badge">UDYAM-MH-26-1087064 • Govt. of India Registered Micro Enterprise</div>
         
-        <h2>About Us</h2>
-        <p>Based in Pune, Maharashtra, Shapal Technologies is an officially registered Micro Enterprise dedicated to delivering high-quality IT consulting, software solutions, and computer service activities tailored to modern business needs.</p>
+        <!-- Leadership Spotlight Section -->
+        <div class="leadership-card">
+            <div class="title">Corporate Leadership</div>
+            <h3>Shalem Chinta</h3>
+            <p class="title" style="color: var(--accent); font-size: 0.85em; margin-bottom: 12px;">Founder & Managing Director</p>
+            <p style="color: var(--text-muted); font-size: 0.95em;">Leading tactical technology execution, bespoke systems configuration, and service delivery frameworks at Shapal Technologies. Engineering scalable digital capabilities engineered for commercial enterprise environments.</p>
+        </div>
         
-        <h2>Our IT Services</h2>
+        <h2>About The Company</h2>
+        <p class="intro">Based out of the growing technology hub of Pune, Maharashtra, Shapal Technologies operates as an officially classified Micro Enterprise under the Ministry of MSME. We deliver high-availability computer programming architectures, strategic IT management consultancy, and advanced specialized computer support services.</p>
+        
+        <h2>Core Capabilities</h2>
         <div class="services">
             <div class="card">
                 <h3>Computer Programming</h3>
-                <p>Custom software development, web applications, and tailor-made coding solutions to streamline your workflows.</p>
+                <p>Architecting production-ready applications, backend data layer management, and customized systems development using cutting-edge enterprise languages.</p>
             </div>
             <div class="card">
                 <h3>IT Consultancy</h3>
-                <p>Expert guidance to help your business adopt the right technology stack, improve security, and scale infrastructure.</p>
+                <p>Strategic structural blueprints, risk posture assessment, technological modernization mapping, and technical resource stack optimization strategy.</p>
             </div>
             <div class="card">
-                <h3>Computer Services (n.e.c)</h3>
-                <p>Comprehensive information technology support and computer service activities to keep your operations running smoothly.</p>
+                <h3>Computer Services n.e.c</h3>
+                <p>Comprehensive ecosystem management and specialized digital service delivery mechanisms tailored to eliminate modern infrastructure overhead.</p>
             </div>
         </div>
 
-        <h2>Contact Our Team</h2>
-        <p>Let's discuss your next technical project. Reach out to us directly:</p>
-        <ul>
-            <li><strong>Email:</strong> shalemchinta@gmail.com</li>
-            <li><strong>Office Address:</strong>  Heaven Park, Pune, Maharashtra - 411060</li>
-        </ul>
+        <h2>Corporate Identification</h2>
+        <div class="info-grid">
+            <div class="info-block">
+                <h4>Official Registry Details</h4>
+                <ul>
+                    <li><strong>NIC Code (5-Digit):</strong> 62099 - Other information technology and computer service activities n.e.c</li>
+                    <li><strong>Major Activity Classification:</strong> Services Sector</li>
+                    <li><strong>Enterprise Category:</strong> Micro Enterprise</li>
+                </ul>
+            </div>
+            <div class="info-block">
+                <h4>Communications & HQ</h4>
+                <ul>
+                    <li><strong>Executive Email:</strong> shalemchinta@gmail.com</li>
+                    <li><strong>Corporate HQ Address:</strong> Sr No 47/1, NP Hills, Heaven Park, Pune, MH, India - 411060</li>
+                    <li><strong>Operational Status:</strong> Active / Continuous</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Shapal Technologies. All Rights Reserved.</p>
+        <p>&copy; 2026 Shapal Technologies. Executed under administrative governance of Shalem Chinta. All Rights Reserved.</p>
     </footer>
 
 </body>
